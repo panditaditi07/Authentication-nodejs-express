@@ -1,0 +1,38 @@
+[
+  {
+    "userId": "13ilnb2kihhdbr2",
+    "email": "aditi@gmail.com",
+    "password": "pass"
+  },
+  {
+    "userId": "13ilnq6kihhmxpe",
+    "email": "sayali@gmail.com",
+    "password": "pass1"
+  },
+  {
+    "userId": "13ilpn3kihixt18",
+    "email": "someone@gmail.com",
+    "password": "123"
+  },
+  {
+    "userId": "13ilq00kihjbtwa",
+    "email": "sandeep@gmail.com",
+    "password": "abc"
+  },
+  {
+    "userId": "13ilrkwkihkfmk5",
+    "email": "tushar@gmail.com",
+    "password": "12345"
+  },
+  {
+    "userId": "13ilrqtkihkiqor",
+    "email": "sumil@gmail.com",
+    "password": "$2a$10$EPbRHDf58XG6xB77VVyOROZUGqpMAbJe4TELOgp01cVAvhk0y/HRm"
+    
+  },
+  {
+    "userId": "13ilt78kihm08k7",
+    "email": "abhay@gmail.com",
+    "password": "$2a$10$EK7yb3wJOqOY2feLMFen8.Gep.C/lMDtt9sfJUcyGkoFTQnrir/.C"
+  }
+]
