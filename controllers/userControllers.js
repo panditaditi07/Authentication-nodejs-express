@@ -2,6 +2,7 @@ const User = require("../models/userModel");
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const { generateToken } = require("../helpers/jwtAuthentication");
 const fileName = path.join(__dirname, "..", "data", "users.json");
 const users = JSON.parse(fs.readFileSync(fileName, "utf-8"));
 
@@ -26,6 +27,22 @@ const loginUser = async (req, res, next) => {
   if (!result) {
     return res.send("Password is incorrect");
   }
+
+  let jwtToken = await generateToken(
+    { email: req.currentUser.email },
+    process.env.JWT_SECRET,
+    { expiresIn: "1d" }
+  );
+  res.cookie("jwt", jwtToken);
+  res.status(200).json({
+    status: "successfully login",
+    data: [
+      {
+        jwt: jwtToken,
+      },
+    ],
+  });
+
   res.send("user logged in sccessfully");
 };
 
