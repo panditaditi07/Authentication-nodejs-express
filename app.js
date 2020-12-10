@@ -12,8 +12,8 @@ app.use(express.json());
 
 app.use("/users", userRouter);
 
-app.get("/dashboard", (req, res) => {
-  console.log("dashboards");
+app.get("/dashboard", protectRoute, (req, res) => {
+  // console.log("dashboards");
   res.sendFile(path.join(__dirname, "public", "dashboard.html"));
 });
 app.listen(
